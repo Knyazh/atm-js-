@@ -37,10 +37,10 @@ function showAlert(message, className) {
   output.style.display = 'block';
 }
 
-document.getElementById('option').addEventListener('change', function() {
+document.querySelector('#option').addEventListener('change', function() {
   const selectedOption = this.value;
-  const amountField = document.getElementById('amount-field');
-  const pinField = document.getElementById('pin-field');
+  const amountField = document.querySelector('#amount-field');
+  const pinField = document.querySelector('#pin-field');
 
   amountField.style.display = 'none';
   pinField.style.display = 'none';
@@ -52,16 +52,16 @@ document.getElementById('option').addEventListener('change', function() {
   }
 });
 
-document.getElementById('submit-btn').addEventListener('click', function() {
-  const selectedOption = document.getElementById('option').value;
+document.querySelector('#submit-btn').addEventListener('click', function() {
+  const selectedOption = document.querySelector('#option').value;
 
   if (selectedOption === '1') {
     viewBalance();
   } else if (selectedOption === '2') {
-    const amount = Number(document.getElementById('amount').value);
+    const amount = Number(document.querySelector('#amount').value);
     withdraw(amount);
   } else if (selectedOption === '3') {
-    const amount = Number(document.getElementById('amount').value);
+    const amount = Number(document.querySelector('#amount').value);
     deposit(amount);
   } else if (selectedOption === '4') {
     resetPin();
