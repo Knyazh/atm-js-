@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./atm.js" defer></script>
+  <title>ATM Simulation</title>
+ 
+<body>
+  <div class="container">
+    <h1>ATM Simulation</h1>
+    <form>
+      <label for="option">Select an option:</label>
+      <select id="option">
+        <option value="1">Balance Inquiry</option>
+        <option value="2">Withdrawal</option>
+        <option value="3">Deposit</option>
+        <option value="4">Change PIN</option>
+        <option value="5">Exit</option>
+      </select>
+
+      <div id="amount-field" style="display: none;">
+        <label for="amount">Enter the amount:</label>
+        <input type="number" id="amount" min="0" step="any">
+      </div>
+
+      <div id="pin-field" style="display: none;">
+        <label for="pin">Enter your PIN:</label>
+        <input type="password" id="pin">
+      </div>
+
+      <button type="button" id="submit-btn">Submit</button>
+    </form>
+
+    <div id="output" class="alert" style="display: none;"></div>
+  </div>
+
+</body>
+</html>
